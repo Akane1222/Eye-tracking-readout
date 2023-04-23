@@ -18,6 +18,12 @@ else:
     tool = tools[0]
 
 #画像の読み込み
-img = Image.open("")
+img = Image.open(r"\test.png")
 img.show()
 
+#文字を読み取り
+builder = pyocr.builders.TextBuilder(tesseract_layout=6)
+result = tool.image_to_string(img,lang="jpn",builder=builder)
+
+#結果を出力
+print(result)

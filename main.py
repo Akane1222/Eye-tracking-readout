@@ -18,7 +18,7 @@ else:
     tool = tools[0]
 
 #画像の読み込み
-img = Image.open(r"\test.png")
+img = Image.open(r"ここにパスを入力")
 img.show()
 
 #文字を読み取り

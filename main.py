@@ -28,7 +28,7 @@ else:
     tool = tools[0]
 
 #画像の読み込み
-img = Image.open(r"IMG_7053.png")
+img = Image.open(r"hoge")
 
 #文字を読み取り
 builder = pyocr.builders.TextBuilder(tesseract_layout=6)

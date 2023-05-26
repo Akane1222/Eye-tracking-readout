@@ -1,1 +1,4 @@
 pyOCR == 0.8.3
+Wave==0.0.2
+Pillow==9.5.0
+pyopenjtalk==0.1.3

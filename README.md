@@ -9,6 +9,8 @@ pip install PyOCR == 0.8.3
 pip install Wave==0.0.2
 pip install Pillow==9.5.0
 pip install pyopenjtalk==0.1.3
+pip install scipy==1.10.1
+pip install numpy==1.24.3
 ```
 
 tesseract(外部ソフトなのでインストールが必要)

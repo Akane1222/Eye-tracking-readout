@@ -4,14 +4,14 @@ import sys
 import pyocr
 from PIL import Image
 import pyopenjtalk as pjt
+import numpy as np
+from scipy.io import wavfile
 import wave
 
-def text_to_speech(text, output_file):
-    labels = pjt.extract_fullcontext(text)
-    wave_data = pjt.synthesize(labels)[0].tobytes()
-    with wave.open(output_file, 'wb') as f:
-        f.setparams((1, 2, 44100, 0, 'NONE', 'not compressed'))
-        f.writeframes(wave_data)
+def text_to_speech(text):
+    y = text.replace(' ','')
+    x, sr = pjt.tts(f"{y}")
+    wavfile.write("test.wav", sr, x.astype(np.int16))
 
 
 #tesseractの指定
@@ -38,4 +38,4 @@ result = tool.image_to_string(img,lang="jpn",builder=builder)
 print(result)
 
 # 音声ファイルを保存して再生
-text_to_speech(bytes(result, encoding='utf-8'), "output.wav")
+text_to_speech(result)

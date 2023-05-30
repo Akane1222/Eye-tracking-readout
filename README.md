@@ -19,7 +19,7 @@ tesseract(外部ソフトなのでインストールが必要)
 Google OCR(使用検討中)
 > https://cloud.google.com/vision/docs/ocr?hl=ja
 
-Google text-to-speech(読み上げにて使用予定)
+Google text-to-speech(仕様検討)
 > https://cloud.google.com/text-to-speech?hl=ja
 
 順次追加
